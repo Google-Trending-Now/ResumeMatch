@@ -1,0 +1,2930 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Resume Keyword Scanner Free | Match Job Descriptions</title>
+  <meta name="description" content="Use our ATS resume keyword scanner free in your browser. Scan your resume against any job description, spot missing skills, and check your ATS match score." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ATS Resume Keyword Scanner Free | Match Job Descriptions" />
+  <meta property="og:description" content="Use our ATS resume keyword scanner free in your browser. Scan your resume against any job description, spot missing skills, and check your ATS match score." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:site_name" content="ResumeMatch" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ATS Resume Keyword Scanner Free | Match Job Descriptions" />
+  <meta name="twitter:description" content="Use our ATS resume keyword scanner free in your browser. Scan your resume against any job description, spot missing skills, and check your ATS match score." />
+
+  <!-- Embedded Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='18' height='24' rx='3' fill='%232563EB'/%3E%3Crect x='8' y='8' width='10' height='2' rx='1' fill='%23FFFFFF'/%3E%3Crect x='8' y='13' width='8' height='2' rx='1' fill='%23BFDBFE'/%3E%3Crect x='8' y='18' width='6' height='2' rx='1' fill='%23BFDBFE'/%3E%3Ccircle cx='22' cy='22' r='8' fill='%2310B981' stroke='%23FFFFFF' stroke-width='2'/%3E%3Cpath d='M18.6 22.1l2.2 2.2 4.6-4.7' fill='none' stroke='%23FFFFFF' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ResumeMatch — ATS Resume Keyword Scanner Free",
+    "url": "https://example.com/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "inLanguage": "en-US",
+    "description": "Free browser-based ATS resume keyword scanner and matcher that compares your resume against any job description without uploading your personal data.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "ATS keyword match score calculator",
+      "Missing and matched skill extraction including 2-word phrases",
+      "Resume word count and measurable impact check",
+      "Contact details and action verb audit",
+      "100% local browser processing with zero uploads"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this ATS resume keyword scanner really free with no signup?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can run unlimited scans without creating an account, entering an email address, or paying for a subscription. Everything works immediately on this page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this tool store or upload my resume?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The keyword matching logic runs 100% inside your web browser using JavaScript. Your resume and job description text never leave your device and are not sent to any server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good ATS resume match score to aim for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aim for 75% or higher on the hard skills, tools, and job-specific phrases that genuinely reflect your background. You do not need 100%—most hiring managers expect candidates to meet around 70% to 85% of a role's listed qualifications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do Applicant Tracking Systems automatically reject resumes with low scores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most major US systems like Workday, Greenhouse, Lever, and iCIMS do not auto-reject resumes based on a keyword score alone. Instead, recruiters search the candidate pool using specific skill keywords. Including accurate terms from the job description makes sure your resume shows up when a recruiter filters applicants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I include both acronyms and full terms on my resume?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, when a term is central to the job. Writing 'Search Engine Optimization (SEO)' or 'Customer Relationship Management (CRM)' once ensures your resume matches whether a recruiter searches for the full phrase or the abbreviation."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-subtle: #F8FAFC;
+      --border: #E2E8F0;
+      --border-strong: #CBD5E1;
+      --text: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --accent: #2563EB;
+      --accent-hover: #1D4ED8;
+      --accent-ring: rgba(37, 99, 235, 0.22);
+      --success: #10B981;
+      --success-bg: #ECFDF5;
+      --success-border: #A7F3D0;
+      --success-text: #047857;
+      --danger: #EF4444;
+      --danger-bg: #FEF2F2;
+      --danger-border: #FECACA;
+      --danger-text: #B91C1C;
+      --warning: #F59E0B;
+      --warning-bg: #FFFBEB;
+      --warning-border: #FDE68A;
+      --warning-text: #B45309;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+      --radius-sm: 6px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --container: 1120px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, textarea {
+      font-family: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Header: strict 3-zone single row */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(248, 250, 252, 0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      height: 60px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .brand svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .site-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 4px 0;
+      border-bottom: 1.5px solid transparent;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+
+    .site-nav a:hover {
+      color: var(--text);
+      border-bottom-color: var(--border-strong);
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 150ms ease, border-color 150ms ease;
+    }
+
+    .header-cta:hover {
+      background: #F1F5F9;
+      border-color: #94A3B8;
+    }
+
+    /* Hero + Workspace Section */
+    .hero-section {
+      padding: 32px 0 40px;
+    }
+
+    .hero-header {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      margin: 0 0 8px;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      text-wrap: balance;
+    }
+
+    .hero-subtitle {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .privacy-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .privacy-inline svg {
+      width: 14px;
+      height: 14px;
+      color: var(--success);
+      flex-shrink: 0;
+    }
+
+    /* Main Workspace Card */
+    .workspace-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+      overflow: hidden;
+    }
+
+    .editor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .editor-pane {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .editor-pane:first-child {
+      border-right: 1px solid var(--border);
+    }
+
+    .pane-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: #FCFDFE;
+    }
+
+    .pane-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .word-count {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .editor-textarea {
+      width: 100%;
+      min-height: 296px;
+      padding: 18px 20px;
+      border: 0;
+      resize: vertical;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.62;
+      outline: none;
+      transition: background-color 150ms ease;
+    }
+
+    .editor-textarea::placeholder {
+      color: #94A3B8;
+    }
+
+    .editor-textarea:focus {
+      background: #FAFBFD;
+      box-shadow: inset 0 0 0 2px var(--accent-ring);
+    }
+
+    /* Validation Alert Banner */
+    .validation-banner {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--danger-bg);
+      border-top: 1px solid var(--danger-border);
+      color: var(--danger-text);
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .validation-banner.is-visible {
+      display: flex;
+    }
+
+    .validation-banner svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* Workspace Action Bar */
+    .workspace-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 14px 20px;
+      background: var(--surface-subtle);
+      border-top: 1px solid var(--border);
+    }
+
+    .toolbar-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 0 16px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 120ms ease;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+      padding: 0 22px;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .btn-secondary:hover {
+      background: #F1F5F9;
+      border-color: #94A3B8;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 0 12px;
+    }
+
+    .btn-ghost:hover {
+      background: #E2E8F0;
+      color: var(--text);
+    }
+
+    .btn-sm {
+      min-height: 34px;
+      padding: 0 12px;
+      font-size: 13px;
+    }
+
+    /* Results Dashboard */
+    .results-section {
+      display: none;
+      margin-top: 28px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1), transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .results-section.is-open {
+      display: block;
+    }
+
+    .results-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .results-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+      overflow: hidden;
+    }
+
+    /* Score Summary Strip */
+    .score-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 24px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .score-main {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      min-width: 0;
+    }
+
+    .score-ring-wrap {
+      position: relative;
+      width: 108px;
+      height: 108px;
+      flex-shrink: 0;
+    }
+
+    .score-ring-svg {
+      width: 108px;
+      height: 108px;
+      transform: rotate(-90deg);
+    }
+
+    .score-ring-track {
+      fill: none;
+      stroke: #E2E8F0;
+      stroke-width: 8;
+    }
+
+    .score-ring-fill {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-dasharray: 289.03;
+      stroke-dashoffset: 289.03;
+      transition: stroke-dashoffset 600ms cubic-bezier(0.16, 1, 0.3, 1), stroke 200ms ease;
+    }
+
+    .score-ring-value {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .score-number {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .score-caption {
+      margin-top: 3px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .score-copy {
+      min-width: 0;
+    }
+
+    .score-status-line {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .score-heading {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .score-verdict {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .verdict-strong {
+      color: var(--success-text);
+      background: var(--success-bg);
+      border-color: var(--success-border);
+    }
+
+    .verdict-medium {
+      color: var(--warning-text);
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+    }
+
+    .verdict-low {
+      color: var(--danger-text);
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+    }
+
+    .score-feedback {
+      margin: 0 0 10px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      max-width: 56ch;
+    }
+
+    .score-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .score-metrics strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .sep {
+      color: #CBD5E1;
+      user-select: none;
+    }
+
+    /* Keywords Two-Column Breakdown */
+    .keywords-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .keyword-col {
+      padding: 24px 28px;
+      min-width: 0;
+    }
+
+    .keyword-col:first-child {
+      border-right: 1px solid var(--border);
+    }
+
+    .keyword-col-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .keyword-col-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .keyword-col-sub {
+      margin: 3px 0 0;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .kw-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.3;
+      border: 1px solid transparent;
+    }
+
+    .kw-badge-high {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger-text);
+    }
+
+    .kw-badge-med {
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: var(--warning-text);
+    }
+
+    .kw-badge-match {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success-text);
+    }
+
+    .kw-freq {
+      font-size: 11.5px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+      opacity: 0.85;
+    }
+
+    .kw-badge svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    .kw-empty {
+      margin: 14px 0 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Quick ATS Health Check */
+    .health-section {
+      padding: 24px 28px;
+      background: #FCFDFE;
+    }
+
+    .health-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .health-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .health-sub {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .health-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .health-item {
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      min-width: 0;
+    }
+
+    .health-item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .health-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .health-status {
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .status-pass {
+      color: var(--success-text);
+    }
+
+    .status-warn {
+      color: var(--warning-text);
+    }
+
+    .status-fail {
+      color: var(--danger-text);
+    }
+
+    .health-value {
+      margin: 0 0 4px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .health-detail {
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.48;
+      color: var(--text-secondary);
+    }
+
+    /* Below-the-fold SEO Content Sections */
+    .content-band {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .content-band.band-white {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      margin: 0 0 10px;
+      font-size: clamp(1.375rem, 2.2vw, 1.625rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      color: var(--text);
+      text-wrap: balance;
+    }
+
+    .section-lead {
+      margin: 0 0 32px;
+      font-size: 15.5px;
+      color: var(--text-secondary);
+      max-width: 66ch;
+    }
+
+    /* 3-Step Grid */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .step-item {
+      padding-top: 16px;
+      border-top: 2px solid var(--border);
+    }
+
+    .step-num {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .step-title {
+      margin: 0 0 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .step-body {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Editorial Article Layout */
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .prose p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.68;
+      color: var(--text-secondary);
+      max-width: 65ch;
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .prose strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .checklist-panel {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 26px;
+    }
+
+    .checklist-panel h3 {
+      margin: 0 0 14px;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .ats-facts {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ats-facts li {
+      padding: 10px 0;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .ats-facts li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .ats-facts li strong {
+      display: block;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* Tips List */
+    .tips-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-width: 820px;
+    }
+
+    .tips-list li {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 14px;
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .tips-list li:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tip-index {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      padding-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .tip-content h3 {
+      margin: 0 0 4px;
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .tip-content p {
+      margin: 0;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      max-width: 820px;
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: transform 180ms ease;
+    }
+
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--accent);
+    }
+
+    .faq-answer {
+      margin: 0 0 18px;
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      max-width: 70ch;
+    }
+
+    /* Minimal Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+      padding: 32px 0 40px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px 24px;
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-meta strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .footer-disclaimer {
+      margin: 12px 0 0;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      max-width: 78ch;
+      line-height: 1.55;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 960px) {
+      .health-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .editorial-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .site-nav {
+        display: none;
+      }
+
+      .hero-section {
+        padding: 20px 0 32px;
+      }
+
+      .editor-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .editor-pane:first-child {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .editor-textarea {
+        min-height: 210px;
+        padding: 14px 16px;
+      }
+
+      .pane-header {
+        padding: 12px 16px;
+      }
+
+      .workspace-toolbar {
+        padding: 14px 16px;
+      }
+
+      .toolbar-actions {
+        width: 100%;
+      }
+
+      .toolbar-actions .btn-primary {
+        flex: 1 1 auto;
+      }
+
+      .btn {
+        min-height: 44px;
+      }
+
+      .btn-sm {
+        min-height: 38px;
+      }
+
+      .score-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 16px;
+      }
+
+      .score-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .keywords-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .keyword-col {
+        padding: 20px 16px;
+      }
+
+      .keyword-col:first-child {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .health-section {
+        padding: 20px 16px;
+      }
+
+      .health-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .content-band {
+        padding: 40px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .results-section,
+      .score-ring-fill,
+      .faq-chevron,
+      .btn {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#scanner" class="brand">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="4" y="2" width="18" height="24" rx="3" fill="#2563EB" />
+          <rect x="8" y="8" width="10" height="2" rx="1" fill="#FFFFFF" />
+          <rect x="8" y="13" width="8" height="2" rx="1" fill="#BFDBFE" />
+          <rect x="8" y="18" width="6" height="2" rx="1" fill="#BFDBFE" />
+          <circle cx="22" cy="22" r="8" fill="#10B981" stroke="#F8FAFC" stroke-width="2" />
+          <path d="M18.6 22.1l2.2 2.2 4.6-4.7" fill="none" stroke="#FFFFFF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>ResumeMatch</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#scanner">Scanner</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#how-ats-reads">ATS Guide</a>
+        <a href="#tips">5 Tips</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#scanner" id="header-scan-link" class="header-cta">Check Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="scanner" class="hero-section" aria-labelledby="page-title">
+      <div class="container">
+        <div class="hero-header">
+          <h1 id="page-title" class="hero-title">Free ATS Resume Keyword Scanner</h1>
+          <p class="hero-subtitle">Compare your resume against any US job description to see matched skills, missing keywords, and quick formatting fixes before you apply.</p>
+          <p class="privacy-inline">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v2H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-1V6a4 4 0 00-4-4zm2 6V6a2 2 0 10-4 0v2h4z" clip-rule="evenodd" />
+            </svg>
+            <span>Runs 100% in your browser. Your resume is never uploaded or stored.</span>
+          </p>
+        </div>
+
+        <div class="workspace-card">
+          <div class="editor-grid">
+            <div class="editor-pane">
+              <div class="pane-header">
+                <label for="resume-input" class="pane-label">Paste Your Resume</label>
+                <span id="resume-word-count" class="word-count" aria-live="polite">0 words</span>
+              </div>
+              <textarea
+                id="resume-input"
+                class="editor-textarea"
+                spellcheck="false"
+                placeholder="Paste the plain text of your resume here (contact info, summary, work history, skills, and education)..."
+              ></textarea>
+            </div>
+
+            <div class="editor-pane">
+              <div class="pane-header">
+                <label for="jd-input" class="pane-label">Paste Job Description</label>
+                <span id="jd-word-count" class="word-count" aria-live="polite">0 words</span>
+              </div>
+              <textarea
+                id="jd-input"
+                class="editor-textarea"
+                spellcheck="false"
+                placeholder="Paste the full job posting here, including responsibilities, required skills, tools, and qualifications..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div id="validation-banner" class="validation-banner" role="alert" aria-live="assertive">
+            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+            </svg>
+            <span id="validation-message"></span>
+          </div>
+
+          <div class="workspace-toolbar">
+            <span class="toolbar-meta">Tip: Copy text directly from Word, Google Docs, or LinkedIn.</span>
+            <div class="toolbar-actions">
+              <button type="button" id="clear-btn" class="btn btn-ghost">Clear All</button>
+              <button type="button" id="sample-btn" class="btn btn-secondary">Load Sample Data</button>
+              <button type="button" id="scan-btn" class="btn btn-primary">
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                </svg>
+                <span>Scan Resume</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Results Dashboard -->
+        <section id="results-section" class="results-section" aria-labelledby="results-heading" aria-live="polite">
+          <div class="results-card">
+            <div class="score-summary">
+              <div class="score-main">
+                <div class="score-ring-wrap" aria-hidden="true">
+                  <svg class="score-ring-svg" viewBox="0 0 108 108">
+                    <circle class="score-ring-track" cx="54" cy="54" r="46" />
+                    <circle id="score-ring-fill" class="score-ring-fill" cx="54" cy="54" r="46" />
+                  </svg>
+                  <div class="score-ring-value">
+                    <span id="score-percent" class="score-number">0%</span>
+                    <span class="score-caption">ATS Match</span>
+                  </div>
+                </div>
+
+                <div class="score-copy">
+                  <div class="score-status-line">
+                    <h2 id="results-heading" class="score-heading">ATS Match Score</h2>
+                    <span id="score-verdict" class="score-verdict verdict-medium">Needs Work</span>
+                  </div>
+                  <p id="score-feedback" class="score-feedback"></p>
+                  <div id="score-metrics" class="score-metrics"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="keywords-grid">
+              <div class="keyword-col">
+                <div class="keyword-col-header">
+                  <div>
+                    <h3 id="missing-heading" class="keyword-col-title">Missing Keywords (0)</h3>
+                    <p class="keyword-col-sub">Red = repeated · Amber = 1 mention · × = job post count</p>
+                  </div>
+                  <button type="button" id="copy-missing-btn" class="btn btn-secondary btn-sm">
+                    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path d="M7 3.5A1.5 1.5 0 018.5 2h3.879a1.5 1.5 0 011.06.44l3.122 3.12A1.5 1.5 0 0117 6.622V12.5a1.5 1.5 0 01-1.5 1.5h-1v-3.379a3 3 0 00-.879-2.121L10.5 5.379A3 3 0 008.379 4.5H7v-1z" />
+                      <path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-5.879a1.5 1.5 0 00-.44-1.06L9.44 6.439A1.5 1.5 0 008.378 6H4.5z" />
+                    </svg>
+                    <span id="copy-missing-label">Copy Missing Keywords</span>
+                  </button>
+                </div>
+                <div id="missing-keywords-list" class="keyword-list" data-testid="missing-keywords"></div>
+              </div>
+
+              <div class="keyword-col">
+                <div class="keyword-col-header">
+                  <div>
+                    <h3 id="matched-heading" class="keyword-col-title">Matched Keywords (0)</h3>
+                    <p class="keyword-col-sub">Keywords and phrases detected in both your resume and the job post</p>
+                  </div>
+                </div>
+                <div id="matched-keywords-list" class="keyword-list" data-testid="matched-keywords"></div>
+              </div>
+            </div>
+
+            <div class="health-section">
+              <div class="health-header">
+                <h3 class="health-title">Quick ATS Health Check</h3>
+                <p class="health-sub">Automated checks for length, recruiter contact details, measurable impact, and verb strength</p>
+              </div>
+              <div id="health-grid" class="health-grid" data-testid="health-checks"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Below-the-Fold SEO Content -->
+    <section id="how-it-works" class="content-band band-white" aria-labelledby="how-it-works-heading">
+      <div class="container">
+        <h2 id="how-it-works-heading" class="section-heading">How to Use This Free ATS Resume Keyword Scanner</h2>
+        <p class="section-lead">Run a fast sanity check before submitting an application. No account, no PDF upload limits, and no hidden paywalls.</p>
+
+        <div class="steps-grid">
+          <div class="step-item">
+            <span class="step-num">01.</span>
+            <h3 class="step-title">Paste your current resume</h3>
+            <p class="step-body">Copy all text from your Word document or Google Doc into the left box. Include your header, summary, work bullets, and skills section so every term gets counted.</p>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">02.</span>
+            <h3 class="step-title">Paste the target job posting</h3>
+            <p class="step-body">Drop the full job description from LinkedIn, Indeed, or the company career site into the right box. Including responsibilities and qualifications gives the most accurate skill list.</p>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">03.</span>
+            <h3 class="step-title">Close the high-priority gaps</h3>
+            <p class="step-body">Click Scan Resume to see your ATS match score and missing phrases. Add the missing tools or skills you genuinely have experience with, then scan again to confirm the lift.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-ats-reads" class="content-band" aria-labelledby="ats-reads-heading">
+      <div class="container">
+        <article class="editorial-grid">
+          <div class="prose">
+            <h2 id="ats-reads-heading" class="section-heading">How Applicant Tracking Systems Actually Read Your Resume</h2>
+            <p>Most mid-size and Fortune 500 employers in the United States use an Applicant Tracking System (ATS) such as Workday, Greenhouse, Lever, iCIMS, or Taleo to organize incoming applications. When you submit a resume, the software strips out visual styling and converts your document into structured plain text—sorting your contact details, job titles, employers, dates, and skills into searchable database fields.</p>
+            <p>Contrary to popular myth, very few hiring teams rely on a robot to automatically reject resumes based on a hidden percentage score. What actually happens is simpler: <strong>recruiters search their applicant pool by keyword</strong>. When 300 people apply for one opening, a recruiter types two or three must-have skills—such as "SQL," "HubSpot," or "budget forecasting"—into the ATS search bar to find qualified candidates first.</p>
+            <p>If you have the experience but used different phrasing than the hiring team, your resume can sit unseen on page four of the search results. Using a free ATS resume checker to compare your wording against the job description helps you mirror the exact language recruiters type when filtering applicants.</p>
+          </div>
+
+          <aside class="checklist-panel" aria-label="ATS parsing essentials">
+            <h3>What trips up most ATS parsers</h3>
+            <ul class="ats-facts">
+              <li>
+                <strong>Multi-column tables and text boxes</strong>
+                Older parsers read left-to-right across the full page, scrambling text inside sidebars or decorative tables.
+              </li>
+              <li>
+                <strong>Contact info hidden in document headers</strong>
+                Some systems ignore Word header and footer zones. Place your email, phone number, and LinkedIn URL in the main body at the top.
+              </li>
+              <li>
+                <strong>Non-standard section titles</strong>
+                Stick to plain labels like "Experience," "Skills," and "Education" instead of creative titles like "My Career Story."
+              </li>
+              <li>
+                <strong>Images, charts, and skill bars</strong>
+                An ATS cannot read text embedded inside a graphic or interpret a five-dot rating bar next to "Excel."
+              </li>
+            </ul>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips" class="content-band band-white" aria-labelledby="tips-heading">
+      <div class="container">
+        <h2 id="tips-heading" class="section-heading">5 Quick Tips to Improve Your Match Score Without Keyword Stuffing</h2>
+        <p class="section-lead">Recruiters spot awkward keyword lists immediately. Use these practical edits to raise your ATS score while keeping your resume natural to read.</p>
+
+        <ol class="tips-list">
+          <li>
+            <span class="tip-index">01</span>
+            <div class="tip-content">
+              <h3>Mirror the exact job title and tool names</h3>
+              <p>If the posting asks for "Customer Success Manager" and your last company called you a "Client Happiness Specialist," include the standard title in parentheses or your summary so both the ATS and the hiring manager recognize the fit right away.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tip-index">02</span>
+            <div class="tip-content">
+              <h3>Pair acronyms with their spelled-out terms</h3>
+              <p>Write "Search Engine Optimization (SEO)" or "Amazon Web Services (AWS)" on first mention. That single habit ensures you match whether a recruiter filters for the acronym or the full phrase.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tip-index">03</span>
+            <div class="tip-content">
+              <h3>Put missing hard skills inside achievement bullets</h3>
+              <p>Instead of dumping 20 terms at the bottom of the page, tie each keyword to a real outcome—for example, "Built weekly pipeline dashboards in Tableau, cutting leadership reporting time by 4 hours a week."</p>
+            </div>
+          </li>
+          <li>
+            <span class="tip-index">04</span>
+            <div class="tip-content">
+              <h3>Focus on repeated terms first</h3>
+              <p>When a job description mentions a tool or method two or three times, it is usually a core requirement for the role. Prioritize the red high-frequency missing keywords before worrying about one-off mentions.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tip-index">05</span>
+            <div class="tip-content">
+              <h3>Only add skills you can discuss in an interview</h3>
+              <p>Treat a resume keyword matcher as a memory jogger, not a script to fabricate experience. Aim for a realistic 75% to 85% match built entirely on work you can back up with concrete examples.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq" class="content-band" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-heading">Frequently Asked Questions</h2>
+        <p class="section-lead">Straight answers about ATS resume scanning, keyword scoring, and privacy.</p>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              <span>Is this ATS resume keyword scanner really free with no signup?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Yes. You can run unlimited scans without creating an account, entering an email address, or paying for a subscription. Everything works immediately on this page.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Does this tool store or upload my resume?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p class="faq-answer">No. The keyword matching logic runs 100% inside your web browser using JavaScript. Your resume and job description text never leave your device and are not sent to any server.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What is a good ATS resume match score to aim for?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Aim for 75% or higher on the hard skills, tools, and job-specific phrases that genuinely reflect your background. You do not need 100%—most hiring managers expect candidates to meet around 70% to 85% of a role's listed qualifications.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Do Applicant Tracking Systems automatically reject resumes with low scores?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Most major US systems like Workday, Greenhouse, Lever, and iCIMS do not auto-reject resumes based on a keyword score alone. Instead, recruiters search the candidate pool using specific skill keywords. Including accurate terms from the job description makes sure your resume shows up when a recruiter filters applicants.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Should I include both acronyms and full terms on my resume?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p class="faq-answer">Yes, when a term is central to the job. Writing "Search Engine Optimization (SEO)" or "Customer Relationship Management (CRM)" once ensures your resume matches whether a recruiter searches for the full phrase or the abbreviation.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-meta">
+          <span>&copy; 2026 ResumeMatch</span>
+          <span class="sep" aria-hidden="true">&middot;</span>
+          <strong>100% Local Processing</strong>
+          <span class="sep" aria-hidden="true">&middot;</span>
+          <span>No cookies, no tracking, no resume uploads.</span>
+        </div>
+      </div>
+      <p class="footer-disclaimer">Disclaimer: ATS match scores and keyword checks are informational estimates based on text comparison against your pasted job description. Employer hiring systems vary, and a high score does not guarantee an interview.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* =========================================================================
+       * 1. Curated Stop Words, Domain Lexicon, Synonyms & Action Verbs
+       * ========================================================================= */
+      var STRICT_STOP_WORDS = new Set([
+        "a", "an", "and", "are", "as", "at", "be", "been", "being", "by", "can",
+        "could", "did", "do", "does", "doing", "done", "for", "from", "had",
+        "has", "have", "having", "he", "her", "here", "hers", "herself", "him",
+        "himself", "his", "how", "i", "if", "in", "into", "is", "it", "its",
+        "itself", "just", "may", "me", "might", "more", "most", "must", "my",
+        "myself", "no", "nor", "not", "now", "of", "off", "on", "once", "only",
+        "or", "other", "our", "ours", "ourselves", "out", "over", "own", "same",
+        "she", "should", "so", "some", "such", "than", "that", "the", "their",
+        "theirs", "them", "themselves", "then", "there", "these", "they", "this",
+        "those", "through", "to", "too", "under", "until", "up", "upon", "us",
+        "very", "was", "we", "were", "what", "when", "where", "which", "while",
+        "who", "whom", "whose", "why", "will", "with", "within", "without",
+        "would", "yet", "you", "your", "yours", "yourself", "yourselves", "about",
+        "above", "across", "after", "again", "against", "all", "almost", "alone",
+        "along", "already", "also", "although", "always", "among", "another",
+        "any", "anyone", "anything", "around", "away", "back", "because", "before",
+        "behind", "below", "beside", "between", "beyond", "both", "but", "cannot",
+        "down", "during", "each", "either", "else", "enough", "even", "ever",
+        "every", "everyone", "few", "first", "further", "get", "gets", "getting",
+        "give", "given", "go", "goes", "going", "got", "however", "instead",
+        "keep", "last", "less", "let", "like", "likely", "made", "make", "makes",
+        "making", "many", "much", "need", "needs", "needed", "neither", "never",
+        "next", "often", "one", "per", "put", "quite", "rather", "really", "right",
+        "said", "say", "see", "seem", "several", "shall", "since", "still", "take",
+        "takes", "taking", "tell", "though", "three", "thus", "together", "toward",
+        "towards", "two", "use", "used", "using", "via", "want", "way", "ways",
+        "well", "whether", "whole", "whose", "yes", "etc", "e.g", "i.e"
+      ]);
+
+      var GENERIC_JD_WORDS = new Set([
+        "ability", "able", "action", "active", "ad", "ads", "additional", "age", "aligned",
+        "amazing", "annual", "applicant", "applicants", "application", "applications",
+        "apply", "applying", "area", "areas", "assist", "authorized", "available",
+        "background", "base", "based", "basic", "believe", "benefit", "benefits",
+        "best", "better", "big", "bonus", "bring", "build", "building", "business",
+        "candidate", "candidates", "career", "center", "challenge", "challenges",
+        "change", "clear", "close", "closely", "collaborate", "collaborating",
+        "collaboration", "collaborative", "color", "committed", "communicate",
+        "communicating", "communication", "communications", "community", "companies",
+        "company", "compensation", "competitive", "complete", "complex", "comprehensive",
+        "confirm", "consider", "considered", "consistent", "contribute", "core",
+        "create", "creating", "creative", "creativity", "critical", "culture",
+        "current", "currently", "daily", "day", "days", "deadline", "deadlines",
+        "dedicated", "deep", "define", "degree", "deliver", "delivering", "delivery",
+        "demonstrate", "demonstrated", "dental", "department", "description", "detail",
+        "detailed", "details", "develop", "developing", "development", "different",
+        "direct", "disability", "diverse", "diversity", "drive", "driven", "driving",
+        "duties", "duty", "dynamic", "effective", "effectively", "efficiency",
+        "efficient", "effort", "eligible", "email", "employee", "employees",
+        "employer", "employment", "encourage", "end", "engage", "ensure", "ensuring",
+        "environment", "equal", "equity", "equivalent", "essential", "establish",
+        "ethic", "everyone", "excellent", "exceptional", "excited", "exciting",
+        "execute", "execution", "existing", "expected", "experience", "experienced",
+        "experiences", "expertise", "external", "familiar", "familiarity", "fast",
+        "fast-paced", "federal", "field", "find", "flexible", "focus", "focused",
+        "follow", "forward", "foster", "free", "full", "full-time", "function",
+        "functional", "functions", "future", "gender", "general", "global", "goal",
+        "goals", "good", "great", "group", "grow", "growing", "growth", "hands-on",
+        "health", "help", "helping", "high", "high-impact", "high-level", "higher",
+        "highly", "hire", "hiring", "holidays", "home", "hour", "hours", "hybrid",
+        "ideal", "ideally", "identify", "identity", "impact", "implement", "important",
+        "improve", "improving", "include", "included", "includes", "including",
+        "inclusion", "inclusive", "independent", "independently", "individual",
+        "individuals", "industry", "information", "initiative", "initiatives",
+        "innovation", "innovative", "input", "insurance", "integrity", "interested",
+        "internal", "interpersonal", "interview", "involve", "job", "jobs", "join",
+        "joining", "key", "kind", "know", "knowledge", "large", "law", "lead",
+        "leader", "leaders", "leadership", "leading", "learn", "learning", "leave",
+        "level", "levels", "life", "limited", "line", "list", "live", "local",
+        "location", "locations", "long", "long-term", "look", "looking", "love",
+        "main", "maintain", "maintaining", "major", "manage", "management",
+        "manager", "managing", "marital", "marketing", "medical", "meet", "meeting", "meetings",
+        "member", "members", "minimum", "mission", "modern", "month", "monthly",
+        "months", "motivated", "move", "multiple", "national", "natural", "necessary",
+        "new", "non-discrimination", "number", "objective", "objectives", "offer",
+        "offering", "office", "offices", "ongoing", "online", "onsite", "open",
+        "opening", "operate", "operating", "opportunities", "opportunity", "order",
+        "organization", "organizational", "organizations", "organized", "oriented",
+        "origin", "others", "outcome", "outcomes", "outstanding", "overall",
+        "overview", "own", "owner", "ownership", "paced", "package", "paid", "parental",
+        "part", "part-time", "partner", "partnering", "partners", "passion",
+        "passionate", "past", "pay", "people", "perform", "performance", "period",
+        "person", "personal", "plan", "planning", "plans", "play", "player", "plus",
+        "point", "policies", "policy", "position", "positions", "positive", "possible",
+        "post", "posting", "potential", "practice", "practices", "prefer", "preferred",
+        "present", "presentation", "primary", "prior", "priorities", "prioritize",
+        "priority", "proactive", "problem", "problems", "process", "processes",
+        "produce", "product", "products", "professional", "professionals",
+        "proficiency", "proficient", "program", "programs", "progress", "project",
+        "projects", "promote", "protected", "proud", "proven", "provide", "providing",
+        "pto", "purpose", "qualification", "qualifications", "qualified", "quality",
+        "quarter", "quarterly", "quick", "quickly", "race", "range", "rapid",
+        "rapidly", "ready", "real", "receive", "record", "regard", "regardless",
+        "regular", "related", "relationship", "relationships", "relevant", "reliable",
+        "religion", "remote", "report", "reporting", "reports", "require", "required",
+        "requirement", "requirements", "requires", "resource", "resources", "respect",
+        "responsibilities", "responsibility", "responsible", "result", "results",
+        "resume", "review", "right", "role", "roles", "run", "running", "salary",
+        "scale", "schedule", "scope", "search", "seek", "seeking", "self",
+        "self-motivated", "self-starter", "senior", "sense", "serve", "service",
+        "services", "set", "setting", "sex", "sexual", "shape", "share", "shared",
+        "shift", "short", "show", "side", "similar", "simple", "size", "skill",
+        "skills", "small", "smart", "solid", "solution", "solutions", "solve",
+        "solving", "sound", "space", "special", "specific", "speed", "spirit",
+        "staff", "stage", "stakeholder", "stakeholders", "standard", "standards",
+        "start", "starter", "state", "states", "status", "stay", "step", "steps",
+        "strategic", "strategy", "strength", "strong", "structure", "style", "submit",
+        "success", "successful", "successfully", "summary", "superior", "support",
+        "supporting", "system", "systems", "talent", "talented", "target", "targets",
+        "task", "tasks", "team", "teams", "teamwork", "technical", "technology",
+        "term", "terms", "think", "thinking", "thrive", "time", "timely", "title",
+        "today", "tool", "tools", "top", "total", "track", "training", "travel",
+        "trend", "trends", "true", "trust", "type", "types", "understand",
+        "understanding", "unique", "unit", "united", "update", "updates", "usa",
+        "user", "users", "using", "vacation", "value", "values", "variety", "various",
+        "verbal", "veteran", "vision", "want", "week", "weekly", "weeks", "welcome",
+        "wellness", "wide", "willing", "willingness", "win", "work", "worked",
+        "worker", "working", "workplace", "world", "world-class", "write", "writing",
+        "written", "year", "years", "401k", "401(k)", "bachelor", "bachelor's",
+        "master", "master's", "ba/bs", "bs/ba", "eeo", "usd"
+      ]);
+
+      /* High-signal domain skills, tools, certifications, and core phrases (US job market) */
+      var KNOWN_SKILLS = new Set([
+        // Tech & Engineering
+        "javascript", "typescript", "python", "java", "c++", "c#", ".net", "golang",
+        "go", "rust", "ruby", "php", "swift", "kotlin", "scala", "sql", "nosql",
+        "postgresql", "mysql", "mongodb", "redis", "snowflake", "bigquery", "redshift",
+        "react", "react.js", "next.js", "vue", "vue.js", "angular", "svelte", "node.js",
+        "express", "django", "flask", "fastapi", "spring", "graphql", "rest", "api",
+        "apis", "microservices", "html", "html5", "css", "css3", "tailwind", "sass",
+        "aws", "azure", "gcp", "docker", "kubernetes", "terraform", "ansible", "jenkins",
+        "ci/cd", "github", "gitlab", "git", "linux", "bash", "devops", "sre",
+        "datadog", "splunk", "prometheus", "grafana", "kafka", "spark", "airflow",
+        "dbt", "etl", "elt", "machine learning", "deep learning", "nlp", "llm",
+        "pytorch", "tensorflow", "scikit-learn", "pandas", "numpy", "cybersecurity",
+        "soc 2", "hipaa", "gdpr", "oauth", "sso", "jwt", "webpack", "vite", "jest",
+        "cypress", "playwright", "selenium", "qa", "unit testing", "system design",
+        "cloud architecture", "data engineering", "data science", "data pipeline",
+        "full-stack", "front-end", "back-end", "web accessibility", "wcag", "agile",
+        "scrum", "kanban", "jira", "confluence",
+
+        // Marketing, Growth & Content
+        "seo", "sem", "ppc", "cro", "crm", "cms", "b2b", "b2c", "saas", "gtm",
+        "hubspot", "salesforce", "marketo", "pardot", "klaviyo", "mailchimp",
+        "braze", "google analytics", "ga4", "google ads", "meta ads", "linkedin ads",
+        "semrush", "ahrefs", "moz", "screaming frog", "wordpress", "webflow",
+        "shopify", "content marketing", "content strategy", "demand generation",
+        "lead generation", "email marketing", "lifecycle marketing", "growth marketing",
+        "product marketing", "brand strategy", "paid search", "paid social",
+        "social media", "copywriting", "a/b testing", "conversion rate",
+        "marketing automation", "attribution modeling", "funnel optimization",
+        "go-to-market", "competitive analysis", "market research", "customer acquisition",
+        "customer retention", "digital marketing", "inbound marketing", "public relations",
+        "event marketing", "partner marketing", "media buying", "editorial calendar",
+
+        // Product, Design & Analytics
+        "product management", "product strategy", "product roadmap", "user research",
+        "usability testing", "wireframing", "prototyping", "design systems", "figma",
+        "sketch", "adobe xd", "photoshop", "illustrator", "indesign", "ui/ux",
+        "ux design", "ui design", "tableau", "power bi", "looker", "mixpanel",
+        "amplitude", "heap", "segment", "excel", "google sheets", "vlookup",
+        "pivot tables", "data analysis", "data visualization", "statistical analysis",
+        "business intelligence", "kpi", "kpis", "okr", "okrs", "roi", "cac", "ltv",
+        "churn", "retention", "cohort analysis", "sql queries", "forecasting",
+
+        // Finance, Operations, Sales & HR
+        "gaap", "cpa", "cfa", "fp&a", "p&l", "ebitda", "financial modeling",
+        "financial analysis", "budgeting", "accounts payable", "accounts receivable",
+        "general ledger", "quickbooks", "netsuite", "sap", "workday", "oracle",
+        "stripe", "audit", "tax compliance", "risk management", "supply chain",
+        "inventory management", "procurement", "logistics", "six sigma", "lean",
+        "pmp", "project management", "program management", "change management",
+        "vendor management", "account management", "account executive", "cold calling",
+        "pipeline management", "contract negotiation", "meddic", "spin selling",
+        "gong", "outreach", "salesloft", "zendesk", "intercom", "customer success",
+        "onboarding", "technical support", "recruiting", "talent acquisition", "hris",
+        "adp", "greenhouse", "lever", "icims", "payroll", "employee relations"
+      ]);
+
+      /* High-signal 3-word phrases common in US job descriptions */
+      var KNOWN_TRIGRAMS = new Set([
+        "search engine optimization", "search engine marketing", "conversion rate optimization",
+        "customer relationship management", "amazon web services", "google cloud platform",
+        "google tag manager", "google analytics 4", "return on investment",
+        "key performance indicator", "key performance indicators", "natural language processing",
+        "continuous integration", "pay per click", "business to business",
+        "business to consumer", "account based marketing", "go to market"
+      ]);
+
+      /* Phrases that should NEVER be emitted as bigrams even if both halves look okay */
+      var BANNED_BIGRAMS = new Set([
+        "equal opportunity", "united states", "fast paced", "team player",
+        "detail oriented", "self starter", "work environment", "job description",
+        "track record", "proven track", "bachelor degree", "master degree",
+        "years experience", "strong communication", "written verbal",
+        "verbal written", "cross functional", "high quality", "best practices",
+        "new york", "san francisco", "los angeles", "north america",
+        "full time", "part time", "health insurance", "paid time",
+        "dental vision", "medical dental", "sick leave", "parental leave",
+        "equal employment", "national origin", "sexual orientation",
+        "gender identity", "veteran status", "protected veteran",
+        "work remotely", "hybrid remote", "salary range", "base salary",
+        "competitive salary", "cover letter", "resume cover", "apply now",
+        "ideal candidate", "successful candidate", "right candidate",
+        "day one", "hands on", "end to", "real time"
+      ]);
+
+      /* Equivalence / synonym groups for accurate resume-to-JD matching */
+      var SYNONYM_MAP = {
+        "seo": ["search engine optimization"],
+        "search engine optimization": ["seo"],
+        "sem": ["search engine marketing"],
+        "search engine marketing": ["sem"],
+        "ppc": ["pay per click", "pay-per-click"],
+        "cro": ["conversion rate optimization"],
+        "conversion rate optimization": ["cro"],
+        "crm": ["customer relationship management"],
+        "customer relationship management": ["crm"],
+        "gtm": ["go-to-market", "go to market"],
+        "go-to-market": ["gtm", "go to market"],
+        "go to market": ["gtm", "go-to-market"],
+        "ga4": ["google analytics 4", "google analytics"],
+        "google analytics": ["ga4", "google analytics 4"],
+        "a/b testing": ["ab testing", "split testing", "a/b test", "a/b tests"],
+        "ab testing": ["a/b testing", "split testing"],
+        "ci/cd": ["continuous integration", "continuous delivery", "continuous deployment", "cicd"],
+        "continuous integration": ["ci/cd", "cicd"],
+        "ui/ux": ["ux/ui", "user experience", "user interface"],
+        "ux/ui": ["ui/ux"],
+        "kpis": ["kpi", "key performance indicators", "key performance indicator"],
+        "kpi": ["kpis", "key performance indicator", "key performance indicators"],
+        "okrs": ["okr", "objectives and key results"],
+        "okr": ["okrs", "objectives and key results"],
+        "roi": ["return on investment"],
+        "return on investment": ["roi"],
+        "b2b": ["business-to-business", "business to business"],
+        "b2c": ["business-to-consumer", "business to consumer"],
+        "node.js": ["nodejs", "node js"],
+        "nodejs": ["node.js", "node js"],
+        "next.js": ["nextjs", "next js"],
+        "nextjs": ["next.js", "next js"],
+        "react.js": ["react", "reactjs"],
+        "react": ["react.js", "reactjs"],
+        "vue.js": ["vue", "vuejs"],
+        "vue": ["vue.js", "vuejs"],
+        "e-commerce": ["ecommerce"],
+        "ecommerce": ["e-commerce"],
+        "front-end": ["frontend", "front end"],
+        "frontend": ["front-end", "front end"],
+        "back-end": ["backend", "back end"],
+        "backend": ["back-end", "back end"],
+        "full-stack": ["fullstack", "full stack"],
+        "fullstack": ["full-stack", "full stack"],
+        "aws": ["amazon web services"],
+        "amazon web services": ["aws"],
+        "gcp": ["google cloud", "google cloud platform"],
+        "google cloud": ["gcp", "google cloud platform"],
+        "power bi": ["powerbi"],
+        "powerbi": ["power bi"],
+        "postgresql": ["postgres"],
+        "postgres": ["postgresql"],
+        "javascript": ["js"],
+        "typescript": ["ts"],
+        "fp&a": ["financial planning and analysis", "financial planning"],
+        "p&l": ["profit and loss"]
+      };
+
+      var ACTION_VERBS = new Set([
+        "accelerated", "achieved", "acquired", "adapted", "administered", "advised",
+        "analyzed", "architected", "assembled", "assessed", "audited", "authored",
+        "automated", "boosted", "budgeted", "built", "championed", "closed",
+        "coached", "collaborated", "compiled", "completed", "conceived", "conducted",
+        "configured", "consolidated", "constructed", "consulted", "converted",
+        "coordinated", "crafted", "created", "cut", "debugged", "decreased",
+        "defined", "delivered", "deployed", "designed", "developed", "devised",
+        "diagnosed", "directed", "discovered", "documented", "doubled", "drove",
+        "edited", "eliminated", "enabled", "engineered", "enhanced", "established",
+        "evaluated", "exceeded", "executed", "expanded", "expedited", "facilitated",
+        "finalized", "forecasted", "formulated", "founded", "generated", "grew",
+        "guided", "headed", "hired", "identified", "implemented", "improved",
+        "increased", "influenced", "initiated", "innovated", "inspected", "installed",
+        "instituted", "integrated", "introduced", "investigated", "launched", "led",
+        "maintained", "managed", "mapped", "maximized", "mentored", "migrated",
+        "minimized", "modeled", "modernized", "monitored", "negotiated", "operated",
+        "optimized", "orchestrated", "organized", "outperformed", "overhauled",
+        "oversaw", "owned", "partnered", "performed", "piloted", "pioneered",
+        "planned", "prepared", "presented", "prioritized", "produced", "programmed",
+        "projected", "promoted", "proposed", "prototyped", "proved", "published",
+        "quantified", "raised", "rebuilt", "recommended", "reconciled", "recruited",
+        "redesigned", "reduced", "refactored", "refined", "remediated", "reorganized",
+        "replaced", "reported", "researched", "resolved", "restructured", "retained",
+        "revamped", "reviewed", "revised", "saved", "scaled", "scheduled", "secured",
+        "segmented", "selected", "shaped", "shipped", "simplified", "solved",
+        "spearheaded", "standardized", "started", "streamlined", "strengthened",
+        "structured", "supervised", "supported", "surpassed", "synthesized",
+        "targeted", "tested", "tracked", "trained", "transformed", "translated",
+        "tripled", "troubleshot", "unified", "upgraded", "validated", "verified",
+        "won", "wrote"
+      ]);
+
+      /* =========================================================================
+       * 2. Pure Keyword Extraction & ATS Analysis Engine
+       * ========================================================================= */
+      function normalizeText(raw) {
+        if (!raw) return "";
+        return String(raw)
+          .replace(/[\u2018\u2019\u2032]/g, "'")
+          .replace(/[\u201C\u201D]/g, '"')
+          .replace(/[\u2013\u2014]/g, "-")
+          .replace(/\u00A0/g, " ");
+      }
+
+      function countWords(text) {
+        var clean = normalizeText(text).trim();
+        if (!clean) return 0;
+        var matches = clean.match(/[A-Za-z0-9]+(?:['’.-][A-Za-z0-9]+)*/g);
+        return matches ? matches.length : 0;
+      }
+
+      function tokenize(text) {
+        var clean = normalizeText(text);
+        /* Match technical tokens like C++, C#, .NET, Node.js, CI/CD, A/B, FP&A, P&L, hyphenated skills, and normal words */
+        var pattern = /(?:\.net\b|c\+\+|c#|ci\/cd|a\/b|ui\/ux|ux\/ui|fp&a|p&l|node\.js|next\.js|vue\.js|react\.js|401\(k\)|[A-Za-z0-9]+(?:[+#'&./-][A-Za-z0-9]+)*)/gi;
+        var rawTokens = clean.match(pattern) || [];
+        var result = [];
+
+        for (var i = 0; i < rawTokens.length; i++) {
+          var original = rawTokens[i];
+          /* Strip stray leading/trailing punctuation except known prefixes/suffixes (.net, c++, c#) */
+          var cleaned = original.replace(/^['"&/-]+|['".,;:/-]+$/g, "");
+          if (!cleaned) continue;
+          var lower = cleaned.toLowerCase();
+          /* Ignore pure numbers (e.g. "2024", "5") unless part of tech terms like ga4, html5, css3, b2b */
+          if (/^\d+(?:[.,-]\d+)*$/.test(lower)) continue;
+          if (lower.length === 1 && lower !== "r" && lower !== "c") continue;
+
+          result.push({
+            raw: cleaned,
+            lower: lower,
+            isProper: /^[A-Z][a-zA-Z0-9.+/#&-]*$/.test(cleaned) || /^[A-Z0-9]{2,6}$/.test(cleaned)
+          });
+        }
+        return result;
+      }
+
+      /* Basic singular/plural normalization while preserving words like analytics, aws, css, business, sass */
+      function singularize(word) {
+        if (!word || word.length <= 3) return word;
+        if (KNOWN_SKILLS.has(word)) {
+          if (word === "apis") return "api";
+          if (word === "kpis") return "kpi";
+          if (word === "okrs") return "okr";
+          return word;
+        }
+        if (/(?:ss|us|is|ics|sis|ious|eous|ness|less|aws|css|sass|cms|gis|ops|devops|redis|pandas|keras|nextjs|nodejs|reactjs|vuejs)$/.test(word)) {
+          return word;
+        }
+        if (word.endsWith("ies") && word.length > 4) {
+          return word.slice(0, -3) + "y";
+        }
+        if (word.endsWith("ses") && word.length > 4 && !word.endsWith("uses") && !word.endsWith("ases")) {
+          return word.slice(0, -2);
+        }
+        if (/(?:ches|shes|xes|zes)$/.test(word) && word.length > 4) {
+          return word.slice(0, -2);
+        }
+        if (word.endsWith("s") && !word.endsWith("ss")) {
+          return word.slice(0, -1);
+        }
+        return word;
+      }
+
+      function normalizePhrase(phrase) {
+        return phrase
+          .toLowerCase()
+          .trim()
+          .split(/\s+/)
+          .map(singularize)
+          .join(" ");
+      }
+
+      function formatDisplayTerm(term, originalCaseMap) {
+        var upperAcronyms = new Set([
+          "seo", "sem", "ppc", "cro", "crm", "cms", "b2b", "b2c", "saas", "gtm",
+          "ga4", "sql", "nosql", "aws", "gcp", "api", "apis", "html", "html5",
+          "css", "css3", "ci/cd", "ui/ux", "ux/ui", "ux", "ui", "qa", "sre",
+          "etl", "elt", "nlp", "llm", "kpi", "kpis", "okr", "okrs", "roi",
+          "cac", "ltv", "gaap", "cpa", "cfa", "fp&a", "p&l", "ebitda", "sap",
+          "pmp", "hris", "adp", "soc 2", "hipaa", "gdpr", "oauth", "sso", "jwt",
+          "wcag", "rest", "a/b", "abm"
+        ]);
+        var specialCases = {
+          "hubspot": "HubSpot",
+          "salesforce": "Salesforce",
+          "marketo": "Marketo",
+          "google analytics": "Google Analytics",
+          "google ads": "Google Ads",
+          "meta ads": "Meta Ads",
+          "linkedin ads": "LinkedIn Ads",
+          "google sheets": "Google Sheets",
+          "power bi": "Power BI",
+          "javascript": "JavaScript",
+          "typescript": "TypeScript",
+          "postgresql": "PostgreSQL",
+          "mysql": "MySQL",
+          "mongodb": "MongoDB",
+          "node.js": "Node.js",
+          "next.js": "Next.js",
+          "vue.js": "Vue.js",
+          "react.js": "React.js",
+          "c++": "C++",
+          "c#": "C#",
+          ".net": ".NET",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "wordpress": "WordPress",
+          "webflow": "Webflow",
+          "shopify": "Shopify",
+          "quickbooks": "QuickBooks",
+          "netsuite": "NetSuite",
+          "semrush": "Semrush",
+          "ahrefs": "Ahrefs",
+          "klaviyo": "Klaviyo",
+          "mailchimp": "Mailchimp",
+          "a/b testing": "A/B Testing",
+          "go-to-market": "Go-to-Market",
+          "sql queries": "SQL Queries"
+        };
+        if (specialCases[term]) return specialCases[term];
+        if (upperAcronyms.has(term)) return term.toUpperCase();
+
+        if (originalCaseMap && originalCaseMap[term] && term.indexOf(" ") === -1) {
+          var sample = originalCaseMap[term];
+          if (/^[A-Z0-9/+.#&-]{2,8}$/.test(sample) && /[A-Z]/.test(sample)) {
+            return sample;
+          }
+          if (/[A-Z]/.test(sample.slice(1)) || sample.indexOf(".") !== -1 || sample.indexOf("/") !== -1) {
+            return sample;
+          }
+        }
+
+        return term.split(" ").map(function (part) {
+          if (upperAcronyms.has(part)) return part.toUpperCase();
+          if (specialCases[part]) return specialCases[part];
+          if (part.indexOf("-") !== -1) {
+            return part.split("-").map(function (sub) {
+              return sub.charAt(0).toUpperCase() + sub.slice(1);
+            }).join("-");
+          }
+          return part.charAt(0).toUpperCase() + part.slice(1);
+        }).join(" ");
+      }
+
+      function isEligibleUnigram(lower) {
+        if (!lower || lower.length < 2) return false;
+        if (KNOWN_SKILLS.has(lower)) return true;
+        var sing = singularize(lower);
+        if (KNOWN_SKILLS.has(sing)) return true;
+        if (STRICT_STOP_WORDS.has(lower) || STRICT_STOP_WORDS.has(sing)) return false;
+        if (GENERIC_JD_WORDS.has(lower) || GENERIC_JD_WORDS.has(sing)) return false;
+        if (ACTION_VERBS.has(lower)) return false;
+        if (lower.length < 3 && !KNOWN_SKILLS.has(lower)) return false;
+        return true;
+      }
+
+      function isEligibleBigramWord(lower) {
+        if (!lower || lower.length < 2) return false;
+        if (STRICT_STOP_WORDS.has(lower)) return false;
+        /* Keep words that participate in real bigrams like "product marketing", "content strategy", "data analysis" */
+        var allowedInBigram = new Set([
+          "product", "project", "program", "marketing", "content", "data", "user",
+          "customer", "client", "business", "financial", "social", "email", "paid",
+          "search", "media", "brand", "growth", "demand", "lead", "lifecycle",
+          "conversion", "funnel", "market", "competitive", "google", "meta",
+          "linkedin", "power", "machine", "deep", "cloud", "system", "unit",
+          "web", "design", "supply", "inventory", "risk", "change", "vendor",
+          "account", "pipeline", "contract", "technical", "talent", "employee",
+          "event", "partner", "editorial", "inbound", "outbound", "sales",
+          "revenue", "operations", "strategy", "management", "analysis",
+          "analytics", "automation", "testing", "research", "modeling",
+          "visualization", "intelligence", "engineering", "architecture",
+          "optimization", "acquisition", "retention", "generation", "planning",
+          "forecasting", "reporting", "negotiation", "support", "success",
+          "relations", "compliance", "security", "accessibility", "roadmap",
+          "systems", "queries", "calendar", "buying", "rate", "sheets", "ads",
+          "chain", "ledger", "payable", "receivable", "science", "pipeline",
+          "a/b", "go-to-market", "b2b", "b2c", "saas", "sql", "seo", "sem",
+          "crm", "cms", "ux", "ui", "ai"
+        ]);
+        if (allowedInBigram.has(lower) || KNOWN_SKILLS.has(lower)) return true;
+        var sing = singularize(lower);
+        if (GENERIC_JD_WORDS.has(lower) || GENERIC_JD_WORDS.has(sing)) return false;
+        if (ACTION_VERBS.has(lower)) return false;
+        return lower.length >= 3;
+      }
+
+      function extractJobKeywords(jobDescription) {
+        var tokens = tokenize(jobDescription);
+        var originalCaseMap = {};
+        var properCountMap = {};
+        var unigramCounts = {};
+        var bigramCounts = {};
+        var trigramCounts = {};
+
+        for (var i = 0; i < tokens.length; i++) {
+          var t = tokens[i];
+          var norm = KNOWN_SKILLS.has(t.lower) ? t.lower : singularize(t.lower);
+          if (!originalCaseMap[norm] || (t.isProper && !/^[A-Z]/.test(originalCaseMap[norm]))) {
+            originalCaseMap[norm] = t.raw;
+          }
+          if (t.isProper) {
+            properCountMap[norm] = (properCountMap[norm] || 0) + 1;
+          }
+          if (isEligibleUnigram(t.lower)) {
+            unigramCounts[norm] = (unigramCounts[norm] || 0) + 1;
+          }
+        }
+
+        /* Extract known 3-word skill phrases and candidate 2-word phrases within clause boundaries */
+        var cleanJD = normalizeText(jobDescription);
+        var segments = cleanJD.split(/[\n\r.!?;:()•·|]+/);
+        for (var s = 0; s < segments.length; s++) {
+          var segTokens = tokenize(segments[s]);
+
+          for (var k = 0; k < segTokens.length - 2; k++) {
+            var triRaw = segTokens[k].lower + " " + segTokens[k + 1].lower + " " + segTokens[k + 2].lower;
+            if (KNOWN_TRIGRAMS.has(triRaw)) {
+              trigramCounts[triRaw] = (trigramCounts[triRaw] || 0) + 1;
+              if (!originalCaseMap[triRaw]) {
+                originalCaseMap[triRaw] = segTokens[k].raw + " " + segTokens[k + 1].raw + " " + segTokens[k + 2].raw;
+              }
+            }
+          }
+
+          for (var j = 0; j < segTokens.length - 1; j++) {
+            var w1 = segTokens[j].lower;
+            var w2 = segTokens[j + 1].lower;
+            if (w1 === w2) continue;
+            if (!isEligibleBigramWord(w1) || !isEligibleBigramWord(w2)) continue;
+
+            var rawPair = w1 + " " + w2;
+            var normPair = (KNOWN_SKILLS.has(rawPair))
+              ? rawPair
+              : (singularize(w1) + " " + singularize(w2));
+
+            if (BANNED_BIGRAMS.has(rawPair) || BANNED_BIGRAMS.has(normPair)) continue;
+
+            /* Keep bigrams that are known skills OR appear 2+ times OR combine a skill/domain anchor */
+            var isKnownBigram = KNOWN_SKILLS.has(rawPair) || KNOWN_SKILLS.has(normPair);
+            var key = isKnownBigram && KNOWN_SKILLS.has(rawPair) ? rawPair : normPair;
+            bigramCounts[key] = (bigramCounts[key] || 0) + 1;
+
+            if (!originalCaseMap[key]) {
+              originalCaseMap[key] = segTokens[j].raw + " " + segTokens[j + 1].raw;
+            }
+          }
+        }
+
+        /* Score candidate known trigrams, bigrams, and unigrams */
+        var candidates = [];
+        var triKeys = Object.keys(trigramCounts);
+        for (var tr = 0; tr < triKeys.length; tr++) {
+          var tKey = triKeys[tr];
+          var tFreq = trigramCounts[tKey];
+          candidates.push({
+            term: tKey,
+            display: formatDisplayTerm(tKey, originalCaseMap),
+            count: tFreq,
+            type: "trigram",
+            isKnown: true,
+            score: tFreq * 4.8 + 4.5
+          });
+        }
+
+        var bigramKeys = Object.keys(bigramCounts);
+        for (var b = 0; b < bigramKeys.length; b++) {
+          var bKey = bigramKeys[b];
+          var bFreq = bigramCounts[bKey];
+          var bKnown = KNOWN_SKILLS.has(bKey);
+          /* Require either known skill bigram or repeated 2+ times in the job posting */
+          if (!bKnown && bFreq < 2) continue;
+
+          var bScore = bFreq * (bKnown ? 4.2 : 2.6) + (bKnown ? 3.5 : 1.0);
+          candidates.push({
+            term: bKey,
+            display: formatDisplayTerm(bKey, originalCaseMap),
+            count: bFreq,
+            type: "bigram",
+            isKnown: bKnown,
+            score: bScore
+          });
+        }
+
+        /* Score candidate unigrams */
+        var uniKeys = Object.keys(unigramCounts);
+        for (var u = 0; u < uniKeys.length; u++) {
+          var uKey = uniKeys[u];
+          var uFreq = unigramCounts[uKey];
+          var uKnown = KNOWN_SKILLS.has(uKey);
+          var uProper = (properCountMap[uKey] || 0) > 0;
+
+          /* Filter noise: unknown lowercase single mentions are rarely core ATS filters unless proper/technical */
+          if (!uKnown && uFreq < 2 && !uProper) continue;
+          if (!uKnown && uKey.length < 4 && !uProper) continue;
+
+          var uScore = uFreq * (uKnown ? 3.6 : (uProper ? 2.1 : 1.5)) + (uKnown ? 3.0 : 0);
+          candidates.push({
+            term: uKey,
+            display: formatDisplayTerm(uKey, originalCaseMap),
+            count: uFreq,
+            type: "unigram",
+            isKnown: uKnown,
+            score: uScore
+          });
+        }
+
+        /* Sort by relevance score descending, then count descending, then alphabetically */
+        candidates.sort(function (a, b) {
+          if (b.score !== a.score) return b.score - a.score;
+          if (b.count !== a.count) return b.count - a.count;
+          return a.term.localeCompare(b.term);
+        });
+
+        /* Deduplicate overlapping sub-phrases already covered by top multi-word skills */
+        var selected = [];
+        var coveredByPhrase = {};
+        var selectedTerms = new Set();
+
+        for (var c = 0; c < candidates.length && selected.length < 28; c++) {
+          var item = candidates[c];
+          if (item.type === "trigram") {
+            selected.push(item);
+            selectedTerms.add(item.term);
+            var triParts = item.term.split(" ");
+            for (var tp = 0; tp < triParts.length; tp++) {
+              coveredByPhrase[triParts[tp]] = (coveredByPhrase[triParts[tp]] || 0) + item.count;
+            }
+            coveredByPhrase[triParts[0] + " " + triParts[1]] = (coveredByPhrase[triParts[0] + " " + triParts[1]] || 0) + item.count;
+            coveredByPhrase[triParts[1] + " " + triParts[2]] = (coveredByPhrase[triParts[1] + " " + triParts[2]] || 0) + item.count;
+          } else if (item.type === "bigram") {
+            if ((coveredByPhrase[item.term] || 0) >= item.count) continue;
+            selected.push(item);
+            selectedTerms.add(item.term);
+            var parts = item.term.split(" ");
+            for (var p = 0; p < parts.length; p++) {
+              coveredByPhrase[parts[p]] = (coveredByPhrase[parts[p]] || 0) + item.count;
+            }
+          } else {
+            var coveredCount = coveredByPhrase[item.term] || 0;
+            /* Skip unigram if all or nearly all of its mentions are already captured by a selected phrase */
+            if (coveredCount > 0 && item.count <= coveredCount && !item.isKnown) {
+              continue;
+            }
+            if (coveredCount > 0 && item.count <= coveredCount && item.term.indexOf(" ") === -1) {
+              var strongStandalone = new Set(["sql", "python", "aws", "seo", "sem", "crm", "react", "figma", "excel", "tableau", "hubspot", "salesforce"]);
+              if (!strongStandalone.has(item.term)) continue;
+            }
+            /* Skip acronym duplicate if its exact spelled-out trigram was already chosen with same count */
+            var syns = SYNONYM_MAP[item.term] || [];
+            var dupOfSelected = false;
+            for (var sy = 0; sy < syns.length; sy++) {
+              if (selectedTerms.has(syns[sy]) && item.count <= 1) {
+                dupOfSelected = true;
+                break;
+              }
+            }
+            if (dupOfSelected) continue;
+            selected.push(item);
+            selectedTerms.add(item.term);
+          }
+        }
+
+        /* Fallback if job description is very brief: include top remaining unigrams */
+        if (selected.length < 6) {
+          var already = new Set(selected.map(function (x) { return x.term; }));
+          var fallbackKeys = Object.keys(unigramCounts).sort(function (a, b) {
+            return unigramCounts[b] - unigramCounts[a];
+          });
+          for (var f = 0; f < fallbackKeys.length && selected.length < 10; f++) {
+            var fk = fallbackKeys[f];
+            if (already.has(fk)) continue;
+            selected.push({
+              term: fk,
+              display: formatDisplayTerm(fk, originalCaseMap),
+              count: unigramCounts[fk],
+              type: "unigram",
+              isKnown: KNOWN_SKILLS.has(fk),
+              score: unigramCounts[fk]
+            });
+            already.add(fk);
+          }
+        }
+
+        return selected;
+      }
+
+      function buildResumeIndex(resumeText) {
+        var tokens = tokenize(resumeText);
+        var unigramSet = new Set();
+        var unigramCounts = {};
+        var bigramSet = new Set();
+        var bigramCounts = {};
+        var normalizedWords = [];
+
+        for (var i = 0; i < tokens.length; i++) {
+          var rawLower = tokens[i].lower;
+          var sing = KNOWN_SKILLS.has(rawLower) ? rawLower : singularize(rawLower);
+          unigramSet.add(rawLower);
+          unigramSet.add(sing);
+          unigramCounts[rawLower] = (unigramCounts[rawLower] || 0) + 1;
+          if (sing !== rawLower) {
+            unigramCounts[sing] = (unigramCounts[sing] || 0) + 1;
+          }
+          normalizedWords.push(sing);
+        }
+
+        for (var j = 0; j < tokens.length - 1; j++) {
+          var rawPair = tokens[j].lower + " " + tokens[j + 1].lower;
+          var normPair = normalizedWords[j] + " " + normalizedWords[j + 1];
+          bigramSet.add(rawPair);
+          bigramSet.add(normPair);
+          bigramCounts[rawPair] = (bigramCounts[rawPair] || 0) + 1;
+          if (normPair !== rawPair) {
+            bigramCounts[normPair] = (bigramCounts[normPair] || 0) + 1;
+          }
+        }
+
+        var normalizedFullText = " " + normalizedWords.join(" ") + " ";
+        var rawFullText = " " + tokens.map(function (t) { return t.lower; }).join(" ") + " ";
+
+        return {
+          unigramSet: unigramSet,
+          unigramCounts: unigramCounts,
+          bigramSet: bigramSet,
+          bigramCounts: bigramCounts,
+          normalizedFullText: normalizedFullText,
+          rawFullText: rawFullText,
+          tokens: tokens
+        };
+      }
+
+      function termMatchesResume(term, resumeIndex) {
+        var variants = [term, normalizePhrase(term)];
+        if (SYNONYM_MAP[term]) {
+          variants = variants.concat(SYNONYM_MAP[term]);
+        }
+        var normTerm = normalizePhrase(term);
+        if (SYNONYM_MAP[normTerm]) {
+          variants = variants.concat(SYNONYM_MAP[normTerm]);
+        }
+
+        for (var i = 0; i < variants.length; i++) {
+          var v = variants[i].toLowerCase().trim();
+          var vNorm = normalizePhrase(v);
+          if (v.indexOf(" ") === -1) {
+            if (resumeIndex.unigramSet.has(v) || resumeIndex.unigramSet.has(vNorm)) {
+              return true;
+            }
+          } else {
+            if (resumeIndex.bigramSet.has(v) || resumeIndex.bigramSet.has(vNorm)) {
+              return true;
+            }
+            if (
+              resumeIndex.rawFullText.indexOf(" " + v + " ") !== -1 ||
+              resumeIndex.normalizedFullText.indexOf(" " + vNorm + " ") !== -1
+            ) {
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+
+      function runHealthChecks(resumeText, resumeTokens) {
+        var clean = normalizeText(resumeText);
+        var words = countWords(clean);
+
+        /* 1. Resume Word Count Check */
+        var wordStatus = "pass";
+        var wordLabel = "On Target";
+        var wordDetail = "Good length for a 1–2 page US resume (ideal range: 250–1,000 words).";
+        if (words < 250) {
+          wordStatus = "fail";
+          wordLabel = "Too Short";
+          wordDetail = "Under 250 words. Add more detail to your experience bullets and skills section.";
+        } else if (words > 1000) {
+          wordStatus = "warn";
+          wordLabel = "Too Long";
+          wordDetail = "Over 1,000 words. Consider trimming older roles so recruiters can scan faster.";
+        }
+
+        /* 2. Contact Info Detection (Email, Phone, LinkedIn) */
+        var hasEmail = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/.test(clean);
+        var hasPhone = /(?:\+?1[-.\s]?)?(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}/.test(clean);
+        var hasLinkedIn = /(?:linkedin\.com\/in\/[A-Za-z0-9_-]+|linkedin\.com\/[A-Za-z0-9_-]+)/i.test(clean);
+
+        var contactFound = [hasEmail, hasPhone, hasLinkedIn].filter(Boolean).length;
+        var missingContacts = [];
+        if (!hasEmail) missingContacts.push("Email");
+        if (!hasPhone) missingContacts.push("Phone");
+        if (!hasLinkedIn) missingContacts.push("LinkedIn URL");
+
+        var contactStatus = contactFound === 3 ? "pass" : (contactFound >= 2 ? "warn" : "fail");
+        var contactLabel = contactFound === 3 ? "Complete" : (contactFound >= 2 ? "1 Missing" : "Incomplete");
+        var contactDetail = contactFound === 3
+          ? "Email, phone number, and LinkedIn profile URL all detected."
+          : "Missing: " + missingContacts.join(", ") + ". Add these in plain text at the top.";
+
+        /* 3. Measurable Results Check (numbers, %, $, multipliers — excluding phone numbers & plain dates) */
+        var withoutContacts = clean
+          .replace(/(?:\+?1[-.\s]?)?(?:\(\d{3}\)|\d{3})[-.\s]?\d{3}[-.\s]?\d{4}/g, " ")
+          .replace(/\b(?:19|20)\d{2}\b/g, " ")
+          .replace(/\b\d{5}(?:-\d{4})?\b/g, " ");
+
+        var metricPattern = /(?:\$\s?\d[\d,.]*(?:\s?[KMBkmb+])?|\d[\d,.]*\s?%|\b\d+(?:\.\d+)?[xX]\b|\b\d[\d,.]*\s?(?:million|billion|thousand|K|M|B)\b|\b\d[\d,]*\+)/g;
+        var metricMatches = withoutContacts.match(metricPattern) || [];
+        var metricCount = metricMatches.length;
+
+        var metricStatus = metricCount >= 4 ? "pass" : (metricCount >= 1 ? "warn" : "fail");
+        var metricLabel = metricCount >= 4 ? "Strong" : (metricCount >= 1 ? "Add More" : "None Found");
+        var metricDetail = metricCount >= 4
+          ? "Solid use of numbers, percentages, or dollar figures to prove impact."
+          : (metricCount >= 1
+            ? "Only " + metricCount + " quantified figure" + (metricCount === 1 ? "" : "s") + " found. Aim for 4+ metrics (%, $, revenue, time saved)."
+            : "No numbers, %, or $ impact figures found. Quantify results in your bullets.");
+
+        /* 4. Action Verbs Count */
+        var foundVerbs = [];
+        var verbSeen = new Set();
+        for (var i = 0; i < resumeTokens.length; i++) {
+          var v = resumeTokens[i].lower;
+          if (ACTION_VERBS.has(v) && !verbSeen.has(v)) {
+            verbSeen.add(v);
+            foundVerbs.push(v);
+          }
+        }
+        var verbCount = foundVerbs.length;
+        var verbStatus = verbCount >= 8 ? "pass" : (verbCount >= 4 ? "warn" : "fail");
+        var verbLabel = verbCount >= 8 ? "Strong" : (verbCount >= 4 ? "Moderate" : "Low");
+        var sampleVerbsText = verbCount > 0
+          ? "Examples: " + foundVerbs.slice(0, 4).join(", ") + "."
+          : "Start bullets with verbs like led, built, launched, or reduced.";
+
+        return [
+          {
+            id: "wordCount",
+            title: "Resume Word Count",
+            value: words.toLocaleString("en-US") + " words",
+            status: wordStatus,
+            statusLabel: wordLabel,
+            detail: wordDetail,
+            rawCount: words
+          },
+          {
+            id: "contactInfo",
+            title: "Contact Information",
+            value: contactFound + " of 3 detected",
+            status: contactStatus,
+            statusLabel: contactLabel,
+            detail: contactDetail,
+            hasEmail: hasEmail,
+            hasPhone: hasPhone,
+            hasLinkedIn: hasLinkedIn
+          },
+          {
+            id: "measurableResults",
+            title: "Measurable Results",
+            value: metricCount + (metricCount === 1 ? " metric found" : " metrics found"),
+            status: metricStatus,
+            statusLabel: metricLabel,
+            detail: metricDetail,
+            rawCount: metricCount
+          },
+          {
+            id: "actionVerbs",
+            title: "Action Verbs",
+            value: verbCount + (verbCount === 1 ? " unique verb" : " unique verbs"),
+            status: verbStatus,
+            statusLabel: verbLabel,
+            detail: sampleVerbsText,
+            rawCount: verbCount,
+            verbs: foundVerbs
+          }
+        ];
+      }
+
+      function analyzeResume(resumeText, jobDescription) {
+        var keywords = extractJobKeywords(jobDescription);
+        var resumeIndex = buildResumeIndex(resumeText);
+
+        var matched = [];
+        var missing = [];
+        var totalWeight = 0;
+        var matchedWeight = 0;
+
+        for (var i = 0; i < keywords.length; i++) {
+          var kw = keywords[i];
+          /* Repeated and known skills carry slightly higher weight in the match percentage */
+          var weight = 1 + Math.min(kw.count - 1, 3) * 0.45 + (kw.isKnown ? 0.4 : 0);
+          totalWeight += weight;
+
+          if (termMatchesResume(kw.term, resumeIndex)) {
+            matched.push(kw);
+            matchedWeight += weight;
+          } else {
+            missing.push(kw);
+          }
+        }
+
+        /* Sort missing keywords: highest JD frequency first, then relevance score */
+        missing.sort(function (a, b) {
+          if (b.count !== a.count) return b.count - a.count;
+          return b.score - a.score;
+        });
+
+        /* Sort matched keywords: highest JD frequency first */
+        matched.sort(function (a, b) {
+          if (b.count !== a.count) return b.count - a.count;
+          return b.score - a.score;
+        });
+
+        var score = totalWeight > 0 ? Math.round((matchedWeight / totalWeight) * 100) : 0;
+        var band = "low";
+        var verdictLabel = "Low Match";
+        var feedback = "Your resume is missing several core terms from this job posting. Focus on adding the red high-frequency keywords that reflect your real experience.";
+
+        if (score >= 75) {
+          band = "strong";
+          verdictLabel = "Strong Match";
+          feedback = "Your resume aligns well with this job description. Review the few remaining gaps below to see if any belong in your summary or experience bullets.";
+        } else if (score >= 50) {
+          band = "medium";
+          verdictLabel = "Needs Work";
+          feedback = "You have a solid baseline, but adding key missing skills and exact 2-word phrases from the posting will help recruiters find your resume faster.";
+        }
+
+        var healthChecks = runHealthChecks(resumeText, resumeIndex.tokens);
+
+        return {
+          score: score,
+          band: band,
+          verdictLabel: verdictLabel,
+          feedback: feedback,
+          totalKeywords: keywords.length,
+          matched: matched,
+          missing: missing,
+          resumeWordCount: countWords(resumeText),
+          jdWordCount: countWords(jobDescription),
+          healthChecks: healthChecks
+        };
+      }
+
+      /* Expose pure engine for deterministic automated testing if window/globalThis is inspected */
+      if (typeof globalThis !== "undefined") {
+        globalThis.__ATS_ENGINE__ = {
+          countWords: countWords,
+          tokenize: tokenize,
+          singularize: singularize,
+          extractJobKeywords: extractJobKeywords,
+          analyzeResume: analyzeResume
+        };
+      }
+
+      /* =========================================================================
+       * 3. Realistic USA Sample Data (Digital Marketing Manager)
+       * ========================================================================= */
+      var SAMPLE_RESUME = [
+        "JORDAN TAYLOR",
+        "Austin, TX | jordan.taylor@email.com | (512) 555-0194 | linkedin.com/in/jordantaylor-mktg",
+        "",
+        "PROFESSIONAL SUMMARY",
+        "Results-focused Digital Marketing Manager with 6+ years of B2B SaaS experience running SEO, paid search, and lifecycle email programs. Skilled in Google Analytics, HubSpot, and conversion rate optimization that directly increases qualified pipeline.",
+        "",
+        "EXPERIENCE",
+        "Digital Marketing Manager — Northstar Cloud Systems, Austin, TX (2022 – Present)",
+        "- Led organic search and content strategy initiatives that increased non-branded organic traffic by 64% in 12 months.",
+        "- Managed $45,000 monthly Google Ads and LinkedIn Ads budgets, cutting cost per qualified lead by 28% while raising lead volume by 35%.",
+        "- Built automated lead nurturing and scoring workflows in HubSpot and Salesforce, generating $1.4M in marketing-sourced pipeline.",
+        "- Executed 30+ A/B testing experiments across core landing pages, raising demo request conversion rate from 2.1% to 3.6%.",
+        "- Partnered with sales leadership and product teams on two major go-to-market launches, producing case studies and battlecards for 18 account executives.",
+        "",
+        "Growth Marketing Specialist — Harborline Software, Denver, CO (2019 – 2022)",
+        "- Managed the WordPress editorial calendar and technical SEO audits using Semrush and Screaming Frog across 240+ product and blog pages.",
+        "- Launched segmented email marketing campaigns that improved free-trial-to-paid conversion by 19% over two quarters.",
+        "- Created weekly KPI performance dashboards in Google Sheets and Google Analytics (GA4) for executive pipeline reviews.",
+        "- Coordinated quarterly webinar series with 1,800+ registrants and a 42% live attendance rate, producing 140+ sales-qualified opportunities.",
+        "- Managed freelance writers and design contractors under a $12,000 monthly content production budget.",
+        "",
+        "SKILLS",
+        "SEO, Paid Search, Google Ads, LinkedIn Ads, HubSpot, Salesforce, Google Analytics (GA4), Content Strategy, Email Marketing, A/B Testing, Conversion Rate Optimization (CRO), WordPress, Semrush, Copywriting, B2B SaaS, Go-to-Market",
+        "",
+        "EDUCATION",
+        "B.S. in Marketing — University of Colorado Boulder"
+      ].join("\n");
+
+      var SAMPLE_JD = [
+        "Senior Demand Generation & Digital Marketing Manager (Remote - US)",
+        "",
+        "About the Role",
+        "We are looking for a data-minded Senior Demand Generation & Digital Marketing Manager to scale inbound and outbound pipeline for our B2B SaaS platform. You will own multi-channel acquisition across paid search, paid social, SEO, and marketing automation.",
+        "",
+        "Key Responsibilities",
+        "- Own end-to-end demand generation strategy across Google Ads, LinkedIn Ads, and Meta Ads to hit quarterly pipeline targets.",
+        "- Optimize organic acquisition through technical SEO, content strategy, and landing page conversion rate optimization (CRO).",
+        "- Build and manage lifecycle email marketing and lead scoring workflows inside HubSpot and Salesforce.",
+        "- Run continuous A/B testing on ad creative, landing pages, and onboarding funnels to improve ROI and lower CAC.",
+        "- Analyze full-funnel campaign performance using Google Analytics (GA4), Looker, and SQL queries to build clear attribution modeling reports.",
+        "- Partner with Product Marketing and Sales on go-to-market launches, webinars, and account-based marketing (ABM) campaigns.",
+        "- Manage agency partners and a $75,000+ monthly paid media budget with disciplined forecasting.",
+        "",
+        "Required Qualifications",
+        "- 5+ years of experience in B2B SaaS digital marketing or demand generation.",
+        "- Deep hands-on proficiency with HubSpot, Salesforce, Google Analytics (GA4), and Google Ads.",
+        "- Proven experience with SEO tools such as Semrush or Ahrefs, plus CMS platforms like Webflow or WordPress.",
+        "- Working familiarity with Looker or Tableau for executive pipeline reporting and attribution modeling.",
+        "- Strong grasp of paid social (LinkedIn Ads and Meta Ads), marketing automation, and A/B testing frameworks.",
+        "- Experience running account-based marketing (ABM) programs and collaborating with enterprise sales teams.",
+        "",
+        "Compensation & Benefits",
+        "Base salary range $115,000 - $135,000 USD, health insurance, 401(k) match, and flexible PTO. We are an equal opportunity employer."
+      ].join("\n");
+
+      /* =========================================================================
+       * 4. DOM Wiring & Interactive UI Rendering
+       * ========================================================================= */
+      if (typeof document === "undefined") return;
+
+      var resumeInput = document.getElementById("resume-input");
+      var jdInput = document.getElementById("jd-input");
+      var resumeWordCountEl = document.getElementById("resume-word-count");
+      var jdWordCountEl = document.getElementById("jd-word-count");
+      var validationBanner = document.getElementById("validation-banner");
+      var validationMessage = document.getElementById("validation-message");
+      var scanBtn = document.getElementById("scan-btn");
+      var sampleBtn = document.getElementById("sample-btn");
+      var clearBtn = document.getElementById("clear-btn");
+      var headerScanLink = document.getElementById("header-scan-link");
+
+      var resultsSection = document.getElementById("results-section");
+      var scoreRingFill = document.getElementById("score-ring-fill");
+      var scorePercentEl = document.getElementById("score-percent");
+      var scoreVerdictEl = document.getElementById("score-verdict");
+      var scoreFeedbackEl = document.getElementById("score-feedback");
+      var scoreMetricsEl = document.getElementById("score-metrics");
+      var missingHeadingEl = document.getElementById("missing-heading");
+      var matchedHeadingEl = document.getElementById("matched-heading");
+      var missingListEl = document.getElementById("missing-keywords-list");
+      var matchedListEl = document.getElementById("matched-keywords-list");
+      var copyMissingBtn = document.getElementById("copy-missing-btn");
+      var copyMissingLabel = document.getElementById("copy-missing-label");
+      var healthGridEl = document.getElementById("health-grid");
+
+      var lastMissingKeywords = [];
+      var copyResetTimer = null;
+      var RING_CIRCUMFERENCE = 2 * Math.PI * 46;
+
+      function updateWordCounts() {
+        var rCount = countWords(resumeInput.value);
+        var jCount = countWords(jdInput.value);
+        resumeWordCountEl.textContent = rCount.toLocaleString("en-US") + (rCount === 1 ? " word" : " words");
+        jdWordCountEl.textContent = jCount.toLocaleString("en-US") + (jCount === 1 ? " word" : " words");
+      }
+
+      function showValidation(msg) {
+        validationMessage.textContent = msg;
+        validationBanner.classList.add("is-visible");
+      }
+
+      function hideValidation() {
+        validationBanner.classList.remove("is-visible");
+        validationMessage.textContent = "";
+      }
+
+      function createSvgCheck() {
+        var ns = "http://www.w3.org/2000/svg";
+        var svg = document.createElementNS(ns, "svg");
+        svg.setAttribute("viewBox", "0 0 16 16");
+        svg.setAttribute("fill", "currentColor");
+        svg.setAttribute("aria-hidden", "true");
+        var path = document.createElementNS(ns, "path");
+        path.setAttribute("fill-rule", "evenodd");
+        path.setAttribute("clip-rule", "evenodd");
+        path.setAttribute("d", "M12.416 3.376a.75.75 0 01.208 1.04l-5 7.5a.75.75 0 01-1.154.114l-3-3a.75.75 0 011.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 011.04-.207z");
+        svg.appendChild(path);
+        return svg;
+      }
+
+      function renderResults(result) {
+        lastMissingKeywords = result.missing.map(function (k) { return k.display; });
+
+        /* Score Ring & Colors */
+        var ringColor = "#EF4444";
+        var verdictClass = "score-verdict verdict-low";
+        if (result.band === "strong") {
+          ringColor = "#10B981";
+          verdictClass = "score-verdict verdict-strong";
+        } else if (result.band === "medium") {
+          ringColor = "#F59E0B";
+          verdictClass = "score-verdict verdict-medium";
+        }
+
+        scorePercentEl.textContent = result.score + "%";
+        scoreVerdictEl.textContent = result.verdictLabel;
+        scoreVerdictEl.className = verdictClass;
+        scoreFeedbackEl.textContent = result.feedback;
+
+        scoreMetricsEl.textContent = "";
+        var metricParts = [
+          { strong: result.matched.length + "/" + result.totalKeywords, rest: " matched" },
+          { strong: String(result.missing.length), rest: " missing" },
+          { strong: result.resumeWordCount.toLocaleString("en-US"), rest: " words" }
+        ];
+        metricParts.forEach(function (part, idx) {
+          if (idx > 0) {
+            var sep = document.createElement("span");
+            sep.className = "sep";
+            sep.setAttribute("aria-hidden", "true");
+            sep.textContent = "·";
+            scoreMetricsEl.appendChild(sep);
+          }
+          var span = document.createElement("span");
+          var strong = document.createElement("strong");
+          strong.textContent = part.strong;
+          span.appendChild(strong);
+          span.appendChild(document.createTextNode(part.rest));
+          scoreMetricsEl.appendChild(span);
+        });
+
+        /* Missing Keywords */
+        missingHeadingEl.textContent = "Missing Keywords (" + result.missing.length + ")";
+        missingListEl.textContent = "";
+        copyMissingBtn.disabled = result.missing.length === 0;
+        copyMissingBtn.style.opacity = result.missing.length === 0 ? "0.5" : "1";
+        copyMissingBtn.style.cursor = result.missing.length === 0 ? "not-allowed" : "pointer";
+        copyMissingLabel.textContent = "Copy Missing Keywords";
+
+        if (result.missing.length === 0) {
+          var noneMissing = document.createElement("p");
+          noneMissing.className = "kw-empty";
+          noneMissing.textContent = "Nice work—your resume already includes all top keywords extracted from this job description.";
+          missingListEl.appendChild(noneMissing);
+        } else {
+          result.missing.forEach(function (kw) {
+            var badge = document.createElement("span");
+            badge.className = "kw-badge " + (kw.count >= 2 ? "kw-badge-high" : "kw-badge-med");
+            badge.title = kw.display + " appears " + kw.count + (kw.count === 1 ? " time" : " times") + " in the job description";
+
+            var termSpan = document.createElement("span");
+            termSpan.textContent = kw.display;
+            var freqSpan = document.createElement("span");
+            freqSpan.className = "kw-freq";
+            freqSpan.textContent = kw.count + "×";
+
+            badge.appendChild(termSpan);
+            badge.appendChild(freqSpan);
+            missingListEl.appendChild(badge);
+          });
+        }
+
+        /* Matched Keywords */
+        matchedHeadingEl.textContent = "Matched Keywords (" + result.matched.length + ")";
+        matchedListEl.textContent = "";
+        if (result.matched.length === 0) {
+          var noneMatched = document.createElement("p");
+          noneMatched.className = "kw-empty";
+          noneMatched.textContent = "No target keywords from the job description were found yet. Check that you pasted the full resume text.";
+          matchedListEl.appendChild(noneMatched);
+        } else {
+          result.matched.forEach(function (kw) {
+            var badge = document.createElement("span");
+            badge.className = "kw-badge kw-badge-match";
+            badge.title = kw.display + " matched (mentioned " + kw.count + (kw.count === 1 ? " time" : " times") + " in job post)";
+
+            badge.appendChild(createSvgCheck());
+            var termSpan = document.createElement("span");
+            termSpan.textContent = kw.display;
+            var freqSpan = document.createElement("span");
+            freqSpan.className = "kw-freq";
+            freqSpan.textContent = kw.count + "×";
+
+            badge.appendChild(termSpan);
+            badge.appendChild(freqSpan);
+            matchedListEl.appendChild(badge);
+          });
+        }
+
+        /* Quick ATS Health Check */
+        healthGridEl.textContent = "";
+        result.healthChecks.forEach(function (check) {
+          var card = document.createElement("div");
+          card.className = "health-item";
+
+          var top = document.createElement("div");
+          top.className = "health-item-top";
+
+          var label = document.createElement("span");
+          label.className = "health-label";
+          label.textContent = check.title;
+
+          var status = document.createElement("span");
+          status.className = "health-status status-" + check.status;
+          status.textContent = check.statusLabel;
+
+          top.appendChild(label);
+          top.appendChild(status);
+
+          var val = document.createElement("p");
+          val.className = "health-value";
+          val.textContent = check.value;
+
+          var detail = document.createElement("p");
+          detail.className = "health-detail";
+          detail.textContent = check.detail;
+
+          card.appendChild(top);
+          card.appendChild(val);
+          card.appendChild(detail);
+          healthGridEl.appendChild(card);
+        });
+
+        /* Reveal Results Smoothly & Animate Ring */
+        resultsSection.classList.add("is-open");
+        scoreRingFill.style.stroke = ringColor;
+        scoreRingFill.style.strokeDasharray = String(RING_CIRCUMFERENCE.toFixed(2));
+        scoreRingFill.style.strokeDashoffset = String(RING_CIRCUMFERENCE.toFixed(2));
+
+        requestAnimationFrame(function () {
+          resultsSection.classList.add("is-visible");
+          requestAnimationFrame(function () {
+            var offset = RING_CIRCUMFERENCE * (1 - result.score / 100);
+            scoreRingFill.style.strokeDashoffset = String(offset.toFixed(2));
+          });
+        });
+
+        resultsSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function handleScan() {
+        hideValidation();
+        var resumeVal = resumeInput.value.trim();
+        var jdVal = jdInput.value.trim();
+
+        if (!resumeVal && !jdVal) {
+          showValidation("Paste your resume and a job description first, or click Load Sample Data to try an example.");
+          resumeInput.focus();
+          return;
+        }
+        if (countWords(resumeVal) < 10) {
+          showValidation("Please paste your resume text (at least 10 words) in the left box before scanning.");
+          resumeInput.focus();
+          return;
+        }
+        if (countWords(jdVal) < 10) {
+          showValidation("Please paste a full job description (at least 10 words) in the right box before scanning.");
+          jdInput.focus();
+          return;
+        }
+
+        var result = analyzeResume(resumeVal, jdVal);
+        renderResults(result);
+      }
+
+      function handleLoadSample() {
+        hideValidation();
+        resumeInput.value = SAMPLE_RESUME;
+        jdInput.value = SAMPLE_JD;
+        updateWordCounts();
+        var result = analyzeResume(SAMPLE_RESUME, SAMPLE_JD);
+        renderResults(result);
+      }
+
+      function handleClearAll() {
+        hideValidation();
+        resumeInput.value = "";
+        jdInput.value = "";
+        updateWordCounts();
+        lastMissingKeywords = [];
+        resultsSection.classList.remove("is-visible", "is-open");
+        resumeInput.focus();
+      }
+
+      function copyTextToClipboard(text) {
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+          return navigator.clipboard.writeText(text).catch(function () {
+            return fallbackCopy(text);
+          });
+        }
+        return Promise.resolve(fallbackCopy(text));
+      }
+
+      function fallbackCopy(text) {
+        var temp = document.createElement("textarea");
+        temp.value = text;
+        temp.setAttribute("readonly", "");
+        temp.style.position = "fixed";
+        temp.style.opacity = "0";
+        document.body.appendChild(temp);
+        temp.select();
+        try {
+          document.execCommand("copy");
+        } catch (err) {
+          /* Ignore clipboard error in restricted sandboxes */
+        }
+        document.body.removeChild(temp);
+      }
+
+      function handleCopyMissing() {
+        if (!lastMissingKeywords.length) return;
+        var textToCopy = lastMissingKeywords.join(", ");
+        copyTextToClipboard(textToCopy).then(function () {
+          copyMissingLabel.textContent = "Copied " + lastMissingKeywords.length + " Keywords";
+          if (copyResetTimer) clearTimeout(copyResetTimer);
+          copyResetTimer = setTimeout(function () {
+            copyMissingLabel.textContent = "Copy Missing Keywords";
+          }, 2200);
+        });
+      }
+
+      resumeInput.addEventListener("input", function () {
+        updateWordCounts();
+        hideValidation();
+      });
+
+      jdInput.addEventListener("input", function () {
+        updateWordCounts();
+        hideValidation();
+      });
+
+      scanBtn.addEventListener("click", handleScan);
+      sampleBtn.addEventListener("click", handleLoadSample);
+      clearBtn.addEventListener("click", handleClearAll);
+      copyMissingBtn.addEventListener("click", handleCopyMissing);
+
+      headerScanLink.addEventListener("click", function () {
+        setTimeout(function () {
+          resumeInput.focus();
+        }, 120);
+      });
+
+      updateWordCounts();
+    })();
+  </script>
+</body>
+</html>
